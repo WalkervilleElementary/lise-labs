@@ -1,6 +1,6 @@
 # Lab 2: Analog Circuits and Filtering
 
-[link](http://projectlab.engphys.ubc.ca/enph253-2017/labs-lectures-2017/lab-2-2017/)
+[Link to lab](http://projectlab.engphys.ubc.ca/enph253-2017/labs-lectures-2017/lab-2-2017/)
 
 ## Circuit Notes
 
@@ -19,6 +19,8 @@ Resistor choice of 330Ω seemed an acceptable balance between sensitivity and re
 We initially used 10kΩ. This resulted in a signal that attenuates at higher frequencies, probably due to the reduction in responsiveness. Attenuation was still noticeable at 1kΩ. At 330Ω, we were able to get an acceptable output. No railing was observed with 15V OpAmp power.
 
 For our final robot circuit, we may consider reducing the resistant further because of the reduction in OpAmp power from 15V to 9V.
+
+The QSD124 has a very small field of view. Pointing even slightly away from the light source has a very large effect on the QSD124.
 
 **2, 3. DC Block, Amplifier**
 
@@ -45,6 +47,7 @@ Zener diode protection info taken from [here](https://electronics.stackexchange.
 
 ## Futher Exploration
 
+* Determine sensor distance range. At what distance does a 10kHz signal result in an equivalent output to a 1kHz signal at, say, 2 cm?
 * Try making fancy diode rectifer
 * Possibly try fancy band pass filter?
 * Test circuit with 9V power

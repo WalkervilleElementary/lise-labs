@@ -6,7 +6,7 @@
 
 ![Circuit schematic](images/lab2.png)
 
-** Counter-clockwise from Top**
+**Counter-clockwise from Top**
 
 **0. Variable Frequency IR Light**
 
@@ -20,11 +20,13 @@ We initially used 10kΩ. This resulted in a signal that attenuates at higher fre
 
 For our final robot circuit, we may consider reducing the resistant further because of the reduction in OpAmp power from 15V to 9V.
 
-The QSD124 has a very small field of view. Pointing even slightly away from the light source has a very large effect on the QSD124.
+The QSD124 has a very small field of view. Pointing even slightly away from the light source has a very large effect on the QSD124 output.
 
 **2, 3. DC Block, Amplifier**
 
 Gain is -3.3. Seems like a good ratio for now.
+
+_Consider using a noninverting amplifer instead of inverting one; will separate feedback resistor more from previous circuitry => lower likelihood of interference with RC time constant of previous section._
 
 **4. Bandpass Filter**
 
@@ -39,6 +41,10 @@ Choice of 47kΩ resistor and 47 nF capacitor results in ~4.5% voltage drop off b
 A buffer was needed to prevent the (probably low-impedance) TINAH analog inputs from messing with the output(s) of the previous circuit.
 
 Zener diode protection info taken from [here](https://electronics.stackexchange.com/questions/35807/how-would-i-design-a-protection-clipper-circuit-for-adc-input). Choice of resistor value is arbitrary; should be higher if higher current may need to be sunk.
+
+_Notes on resistor value choice:_
+- should never need to be higher than 100Ω with typical OpAmp output current levels
+- if too high, will affect readings (act as voltage divider)
 
 ## Further Notes
 

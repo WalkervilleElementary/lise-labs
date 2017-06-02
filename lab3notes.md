@@ -4,7 +4,7 @@
 
 Code snippet:
 
-```
+```C++
 void loop()
 {
   long motorSpeed = map(knob(6), 0, 1023, -255, 255);
@@ -27,7 +27,7 @@ void loop()
 
 Code snippet:
 
-```
+```C++
 void loop()
 {
   long servoPosition = map(knob(6), 0, 1023, 0, 180);
@@ -41,7 +41,7 @@ void loop()
 
 ## 3. Check motor output waveform with and without 10k resistors
 
-![Sketch of observed motor output waveforms](images/lab3-motor-output)
+![Sketch of observed motor output waveforms](images/lab3-motor-output.jpg)
 
 Key takeaway: might want resistors at TINAH motor outputs, for better responsiveness?
 
